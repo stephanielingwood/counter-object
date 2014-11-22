@@ -7,7 +7,11 @@ var Counter = require('../lib/counter.js');
 
 
 describe('Counter', function() {
-  var c = new Counter();
+  var c;
+
+  before(function() {
+    c = new Counter();
+  });
 
   it('has a counter value of zero after the object is created', function(done) {
     expect(c.returnCount()).to.eql(0);

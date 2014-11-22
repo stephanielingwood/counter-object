@@ -10,10 +10,10 @@ module.exports = function(grunt) {
 
     jscs: {
       all: {
-        src: "lib/*.js",
+        src: ["lib/*.js", "test/*.js"],
         options: {
-            config: ".jscsrc",
-            requireCurlyBraces: [ "if" ]
+          config: ".jscsrc",
+          requireCurlyBraces: [ "if" ]
         }
 
       }
@@ -26,4 +26,4 @@ module.exports = function(grunt) {
   });
   grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
   grunt.registerTask('default', ['test']);
-}
+};
